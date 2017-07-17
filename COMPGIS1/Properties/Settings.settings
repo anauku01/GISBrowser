@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="COMPGIS1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompWorksConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Iddeal_Server_Ver8\Iddeal_DE1\Data\Comp_BP_Data_Lasalle.mdb;Persist Security Info=True;Password=waiheke;User ID=developer;Jet OLEDB:System database=C:\Iddeal_Server_Ver8\V08.mdw;Jet OLEDB:Database Password=waiheke&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Iddeal_Server_Ver8\Iddeal_DE1\Data\Comp_BP_Data_Lasalle.mdb;Persist Security Info=True;Password=waiheke;User ID=developer;Jet OLEDB:System database=C:\Iddeal_Server_Ver8\V08.mdw;Jet OLEDB:Database Password=waiheke</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

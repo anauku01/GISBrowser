@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2695AED-F4FF-49C6-874F-788B959C60E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COMPGIS1</RootNamespace>
+    <AssemblyName>COMPGIS1</AssemblyName>
+    <ApplicationIcon>Earth.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArcEngineBP.cs" />
+    <Compile Include="ArcEngineGIS.cs" />
+    <Compile Include="ArcEngineSW.cs" />
+    <Compile Include="BEDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BEDetails.designer.cs">
+      <DependentUpon>BEDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPChemicalAnalysisDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPChemicalAnalysisDetails.designer.cs">
+      <DependentUpon>BPChemicalAnalysisDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPRectifierDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPRectifierDetails.Designer.cs">
+      <DependentUpon>BPRectifierDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPRiskRanking.cs" />
+    <Compile Include="BPTestStationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPTestStationDetails.Designer.cs">
+      <DependentUpon>BPTestStationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompWorksDBConnect.cs" />
+    <Compile Include="CompWorksGISStructs.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="BPCP_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPCP_Details.designer.cs">
+      <DependentUpon>BPCP_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SWFlowSegmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SWFlowSegmentDetails.designer.cs">
+      <DependentUpon>SWFlowSegmentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SWLineDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SWLineDetails.designer.cs">
+      <DependentUpon>SWLineDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewDocument.cs" />
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DBIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBIndexForm.Designer.cs">
+      <DependentUpon>DBIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPDBUpdates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPDBUpdates.Designer.cs">
+      <DependentUpon>BPDBUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluationDetails.Designer.cs">
+      <DependentUpon>EvaluationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastLook.cs" />
+    <Compile Include="FastLookViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastLookViewer.Designer.cs">
+      <DependentUpon>FastLookViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldLogDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FieldLogDetails.Designer.cs">
+      <DependentUpon>FieldLogDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filter_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filter_Edit.Designer.cs">
+      <DependentUpon>Filter_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BP_FindFeaturesDef.cs" />
+    <Compile Include="findGuidedWavebyLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findGuidedWavebyLevel.Designer.cs">
+      <DependentUpon>findGuidedWavebyLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findLineSectionLCOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findLineSectionLCOForm.Designer.cs">
+      <DependentUpon>findLineSectionLCOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findLineSectionsRiskRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findLineSectionsRiskRanking.Designer.cs">
+      <DependentUpon>findLineSectionsRiskRanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPInspectionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPInspectionDetails.Designer.cs">
+      <DependentUpon>BPInspectionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findLineSectionInspections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findLineSectionInspections.Designer.cs">
+      <DependentUpon>findLineSectionInspections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="findUserSelectBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findUserSelectBP.Designer.cs">
+      <DependentUpon>findUserSelectBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayerConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerConfigForm.Designer.cs">
+      <DependentUpon>LayerConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayersContextMenu.cs" />
+    <Compile Include="BPLineDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPLineDetails.designer.cs">
+      <DependentUpon>BPLineDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPLineSectionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPLineSectionDetails.designer.cs">
+      <DependentUpon>BPLineSectionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPLineSectionLayerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPLineSectionLayerSettings.Designer.cs">
+      <DependentUpon>BPLineSectionLayerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPLineSectionInspections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPLineSectionInspections.designer.cs">
+      <DependentUpon>BPLineSectionInspections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryMap.cs" />
+    <Compile Include="RadarPlotGen.cs" />
+    <Compile Include="BPSieveAnalysisDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BPSieveAnalysisDetails.Designer.cs">
+      <DependentUpon>BPSieveAnalysisDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectFromStringList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectFromStringList.Designer.cs">
+      <DependentUpon>SelectFromStringList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSelectionForm.Designer.cs">
+      <DependentUpon>SystemSelectionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BEDetails.resx">
+      <DependentUpon>BEDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPChemicalAnalysisDetails.resx">
+      <DependentUpon>BPChemicalAnalysisDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPCP_Details.resx">
+      <DependentUpon>BPCP_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPRectifierDetails.resx">
+      <DependentUpon>BPRectifierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPTestStationDetails.resx">
+      <DependentUpon>BPTestStationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationForm.resx">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWFlowSegmentDetails.resx">
+      <DependentUpon>SWFlowSegmentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWLineDetails.resx">
+      <DependentUpon>SWLineDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBIndexForm.resx">
+      <DependentUpon>DBIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPDBUpdates.resx">
+      <DependentUpon>BPDBUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluationDetails.resx">
+      <DependentUpon>EvaluationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastLookViewer.resx">
+      <DependentUpon>FastLookViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldLogDetails.resx">
+      <DependentUpon>FieldLogDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filter_Edit.resx">
+      <DependentUpon>Filter_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findGuidedWavebyLevel.resx">
+      <DependentUpon>findGuidedWavebyLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findLineSectionLCOForm.resx">
+      <DependentUpon>findLineSectionLCOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findLineSectionsRiskRanking.resx">
+      <DependentUpon>findLineSectionsRiskRanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPInspectionDetails.resx">
+      <DependentUpon>BPInspectionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findLineSectionInspections.resx">
+      <DependentUpon>findLineSectionInspections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPLineDetails.resx">
+      <DependentUpon>BPLineDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPLineSectionDetails.resx">
+      <DependentUpon>BPLineSectionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPLineSectionLayerSettings.resx">
+      <DependentUpon>BPLineSectionLayerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPLineSectionInspections.resx">
+      <DependentUpon>BPLineSectionInspections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="findUserSelectBP.resx">
+      <DependentUpon>findUserSelectBP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerConfigForm.resx">
+      <DependentUpon>LayerConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="BPSieveAnalysisDetails.resx">
+      <DependentUpon>BPSieveAnalysisDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFromStringList.resx">
+      <DependentUpon>SelectFromStringList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSelectionForm.resx">
+      <DependentUpon>SystemSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Earth.ico" />
+    <None Include="Resources\Search21.png" />
+    <None Include="Resources\Search1.png" />
+    <None Include="Resources\xl.png" />
+    <None Include="Resources\collapse-small-blue.png" />
+    <None Include="Resources\expand-small-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
